@@ -8,11 +8,9 @@ import {
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'About', href: '#', current: true },
-  { name: 'Products', href: '#', current: false },
-  { name: 'Blog', href: '#', current: false },
+  { name: 'Features', href: '#', current: false },
   { name: 'Contests', href: '#', current: false },
-  { name: 'Contact Us', href: '#', current: false }
+  { name: 'Contact Us', href: '#', current: true }
 ]
 
 function classNames(...classes) {
@@ -28,7 +26,7 @@ export default function Example() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 right-0flex sm:hidden">
                 {/* Mobile menu button*/}
-                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-black-400 hover:bg-[#28CDCF] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -55,7 +53,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:text-white ease-in-out duration-300',
+                          item.current ? 'bg-[#28CDCF] text-white' : 'text-black hover:text-white hover:bg-[#28CDCF] ease-in-out duration-300',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -77,7 +75,7 @@ export default function Example() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'text-gray' : 'text-gray hover:text-white ease-in-out dration-300',
+                    item.current ? 'text-black' : 'text-black hover:bg-[#28CDCF] hover:text-white ease-in-out dration-300',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
