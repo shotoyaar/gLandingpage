@@ -1,25 +1,25 @@
-'use client';
-import { Fragment } from 'react'
+"use client";
+import { Fragment } from "react";
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-} from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+} from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: 'Features', href: '#', current: false },
-  { name: 'Contests', href: '#', current: false },
-  { name: 'Contact Us', href: '#', current: true }
-]
+  { name: "Features", href: "#", current: false },
+  { name: "Contests", href: "#", current: false },
+  { name: "Contact Us", href: "#", current: true },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-transparent">
+    <Disclosure as="nav" className="bg-transparent sticky top-0">
       {({ open }) => (
         <>
           <div className="max-w-screen px-2 sm:px-6 lg:px-8">
@@ -53,10 +53,12 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-[#28CDCF] text-white' : 'text-black hover:text-white hover:bg-[#28CDCF] ease-in-out duration-300',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current
+                            ? "bg-[#28CDCF] text-white"
+                            : "text-black hover:text-white hover:bg-[#28CDCF] ease-in-out duration-300",
+                          "rounded-md px-3 py-2 text-sm font-medium",
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </a>
@@ -75,10 +77,12 @@ export default function Example() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'text-black' : 'text-black hover:bg-[#28CDCF] hover:text-white ease-in-out dration-300',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "text-black"
+                      : "text-black hover:bg-[#28CDCF] hover:text-white ease-in-out dration-300",
+                    "block rounded-md px-3 py-2 text-base font-medium",
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </DisclosureButton>
@@ -88,5 +92,5 @@ export default function Example() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
