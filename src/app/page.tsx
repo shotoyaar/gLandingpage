@@ -73,10 +73,10 @@ export default function Home() {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-            className="flex flex-row"
+            className="flex flex-row mx-auto"
           >
             <Image src="/soap1.jpg" alt="soap1" height={500} width={500} />
-            <section className="flex flex-col">
+            <section className="flex flex-col ml-48">
               <p className="text-4xl text-black font-semibold text-center mt-auto ml-24">
                 First soap.
               </p>
@@ -92,10 +92,10 @@ export default function Home() {
             className="flex flex-row"
           >
             <section className="flex flex-col">
-              <p className="text-4xl text-black font-semibold text-center mt-auto ml-24">
+              <p className="text-4xl text-black font-semibold text-center mt-auto ml-24 mr-48">
                 Second soap.
               </p>
-              <p className="text-2xl text-grey-800 font-medium mt-0 my-auto ml-24">
+              <p className="text-2xl text-grey-800 font-medium mt-0 my-auto ml-24 mr-48">
                 Second soap.
               </p>
             </section>
@@ -114,7 +114,7 @@ export default function Home() {
             className="flex flex-row"
           >
             <Image src="/soap3.jpg" alt="soap3" height={500} width={500} />
-            <section className="flex flex-col">
+            <section className="flex flex-col ml-48">
               <p className="text-4xl text-black font-semibold text-center mt-auto ml-24">
                 Third soap.
               </p>
@@ -161,6 +161,8 @@ export default function Home() {
             </p>
           </motion.div>
         </div>
+
+        <div className="max-w-full"></div>
         <Cform />
       </span>
     </main>
